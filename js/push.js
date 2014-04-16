@@ -23,8 +23,8 @@
   var cacheMapping   = sessionStorage;
   var domCache       = {};
   var transitionMap  = {
-    slideIn  : 'slide-out',
-    slideOut : 'slide-in',
+    'slide-in'  : 'slide-out',
+    'slide-out' : 'slide-in',
     fade     : 'fade'
   };
 
@@ -239,7 +239,7 @@
         url        : window.location.href,
         title      : document.title,
         timeout    : options.timeout,
-        transition : null
+        transition : options.transition
       });
     }
 
