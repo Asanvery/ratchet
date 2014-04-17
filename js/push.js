@@ -209,7 +209,7 @@
 
     options.container = options.container || options.transition ? document.querySelector('.content') : document.body;
 
-    var is_file_protocol = /^file:/.test(window.location.protocol)
+    var isFileProtocol = /^file:/.test(window.location.protocol)
 
     for (key in bars) {
       if (bars.hasOwnProperty(key)) {
@@ -223,7 +223,7 @@
     }
 
     xhr = new XMLHttpRequest();
-    if (is_file_protocol) {
+    if (isFileProtocol) {
       xhr.open('GET', options.url, false)
     } else {
       xhr.open('GET', options.url, true);
@@ -255,7 +255,7 @@
 
     xhr.send();
 
-    if (is_file_protocol) {
+    if (isFileProtocol) {
       if (xhr.status === 0) {
         success(xhr, options)
       } else {
